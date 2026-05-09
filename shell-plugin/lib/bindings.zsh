@@ -35,14 +35,20 @@ function forge-bracketed-paste() {
     zle reset-prompt
 }
 
-# Register the bracketed paste widget to fix highlighting on paste
-zle -N bracketed-paste forge-bracketed-paste
+# Re-applied after zsh-vi-mode's `zvm_init` precmd hook, which rebuilds the
+# main/viins/vicmd keymaps and otherwise silently clobbers these bindings.
+function _forge_apply_keybindings() {
+    zle -N bracketed-paste forge-bracketed-paste
+    bindkey '^M' forge-accept-line
+    bindkey '^J' forge-accept-line
+    bindkey '^I' forge-completion
+}
 
-# Bind Enter to our custom accept-line that transforms :commands
-bindkey '^M' forge-accept-line
-bindkey '^J' forge-accept-line
-# Update the Tab binding to use the new completion widget
-bindkey '^I' forge-completion  # Tab for both @ and :command completion
+_forge_apply_keybindings
+
+# Harmless no-op when zsh-vi-mode (jeffreytse/zsh-vi-mode) isn't loaded.
+typeset -ga zvm_after_init_commands
+zvm_after_init_commands+=('_forge_apply_keybindings')
 
 # Coordinate with zsh-autosuggestions: register forge-accept-line so POSTDISPLAY
 # is cleared when Enter is pressed, preventing ghost text from overlapping output.
@@ -52,3 +58,4 @@ if typeset -f _zsh_autosuggest_bind_widgets >/dev/null 2>&1; then
     _zsh_autosuggest_bind_widgets
   fi
 fi
+
