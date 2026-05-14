@@ -43,3 +43,12 @@ bindkey '^M' forge-accept-line
 bindkey '^J' forge-accept-line
 # Update the Tab binding to use the new completion widget
 bindkey '^I' forge-completion  # Tab for both @ and :command completion
+
+# Coordinate with zsh-autosuggestions: register forge-accept-line so POSTDISPLAY
+# is cleared when Enter is pressed, preventing ghost text from overlapping output.
+if typeset -f _zsh_autosuggest_bind_widgets >/dev/null 2>&1; then
+  if [[ ${ZSH_AUTOSUGGEST_CLEAR_WIDGETS[(Ie)forge-accept-line]} -eq 0 ]]; then
+    ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(forge-accept-line)
+    _zsh_autosuggest_bind_widgets
+  fi
+fi

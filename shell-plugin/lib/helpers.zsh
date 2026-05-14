@@ -106,12 +106,9 @@ function _forge_select_model_pair() {
 }
 
 function _forge_reset() {
-  # Clear buffer and reset cursor position
   BUFFER=""
   CURSOR=0
-  # Force widget redraw and prompt reset
-  zle -I
-  zle reset-prompt
+  zle .accept-line
 }
 
 # Helper function to print messages with consistent formatting based on log level
