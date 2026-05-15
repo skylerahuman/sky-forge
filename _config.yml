@@ -1,8 +1,14 @@
 title: Sky-Agent
-theme: jekyll-theme-minimal
+url: "https://skylerahuman.github.io"
+baseurl: "/sky-forge"
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
 sass:
   style: compressed
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

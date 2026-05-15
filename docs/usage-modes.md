@@ -36,4 +36,4 @@ Best for:
 - `:`-prefixed commands
 - attaching files or switching agents without leaving the terminal
 
-See the dedicated [ZSH Plugin](zsh-plugin.md) guide for the command reference.
+See the dedicated [ZSH Plugin]({{ '/docs/zsh-plugin.html' | relative_url }}) guide for the command reference.

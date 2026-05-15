@@ -23,6 +23,6 @@ The current transition still uses the `forge` CLI name, so most shell examples w
 
 ## What to read next
 
-- [Usage Modes](usage-modes.md) to understand interactive, one-shot, and ZSH workflows.
-- [Configuration](configuration.md) to learn how settings, providers, and preferences are resolved.
-- [ZSH Plugin](zsh-plugin.md) to use the terminal-first `:` command workflow.
+- [Usage Modes]({{ '/docs/usage-modes.html' | relative_url }}) to understand interactive, one-shot, and ZSH workflows.
+- [Configuration]({{ '/docs/configuration.html' | relative_url }}) to learn how settings, providers, and preferences are resolved.
+- [ZSH Plugin]({{ '/docs/zsh-plugin.html' | relative_url }}) to use the terminal-first `:` command workflow.

@@ -10,22 +10,22 @@ It is designed to help you move quickly in the terminal while keeping the docume
 
 ## Start here
 
-- [Getting Started](docs/getting-started.md)
-- [Usage Modes](docs/usage-modes.md)
-- [Configuration](docs/configuration.md)
+- [Getting Started]({{ '/docs/getting-started.html' | relative_url }})
+- [Usage Modes]({{ '/docs/usage-modes.html' | relative_url }})
+- [Configuration]({{ '/docs/configuration.html' | relative_url }})
 
 ## Explore the system
 
-- [Architecture](docs/architecture.md)
-- [Agent Authoring](docs/agent-authoring.md)
-- [Skills](docs/skills.md)
-- [Memory](docs/memory.md)
-- [Autonomy](docs/autonomy.md)
-- [Rust Standards](docs/rust-standards.md)
+- [Architecture]({{ '/docs/architecture.html' | relative_url }})
+- [Agent Authoring]({{ '/docs/agent-authoring.html' | relative_url }})
+- [Skills]({{ '/docs/skills.html' | relative_url }})
+- [Memory]({{ '/docs/memory.html' | relative_url }})
+- [Autonomy]({{ '/docs/autonomy.html' | relative_url }})
+- [Rust Standards]({{ '/docs/rust-standards.html' | relative_url }})
 
 ## Terminal workflows
 
-- [ZSH Plugin](docs/zsh-plugin.md)
+- [ZSH Plugin]({{ '/docs/zsh-plugin.html' | relative_url }})
 
 ## Transition notes
 
