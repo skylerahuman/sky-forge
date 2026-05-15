@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="{{ '/getting-started.html' | relative_url }}">Start</a>
+          <a href="{{ '/usage-modes.html' | relative_url }}">Modes</a>
+          <a href="{{ '/configuration.html' | relative_url }}">Config</a>
+          <a href="{{ '/architecture.html' | relative_url }}">Architecture</a>
+        </nav>
+      </header>
+      <main class="content">
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>
