@@ -8,24 +8,30 @@ Sky-Agent is a lightweight AI coding assistant for terminal-first development.
 
 It is designed to help you move quickly in the terminal while keeping the documentation and configuration model readable, local-first, and easy to extend.
 
-## Start here
+## Install
 
-- [Getting Started]({{ '/docs/getting-started.html' | relative_url }})
-- [Usage Modes]({{ '/docs/usage-modes.html' | relative_url }})
-- [Configuration]({{ '/docs/configuration.html' | relative_url }})
+```bash
+curl -fsSL https://agent.skylershuman.com/cli | sh
+```
+
+The installer downloads release binaries from [`skylerahuman/sky-forge`](https://github.com/skylerahuman/sky-forge). Sky-Agent currently installs as `forge` while the binary rename is still in progress.
+
+- [Getting Started]({{ '/getting-started.html' | relative_url }})
+- [Usage Modes]({{ '/usage-modes.html' | relative_url }})
+- [Configuration]({{ '/configuration.html' | relative_url }})
 
 ## Explore the system
 
-- [Architecture]({{ '/docs/architecture.html' | relative_url }})
-- [Agent Authoring]({{ '/docs/agent-authoring.html' | relative_url }})
-- [Skills]({{ '/docs/skills.html' | relative_url }})
-- [Memory]({{ '/docs/memory.html' | relative_url }})
-- [Autonomy]({{ '/docs/autonomy.html' | relative_url }})
-- [Rust Standards]({{ '/docs/rust-standards.html' | relative_url }})
+- [Architecture]({{ '/architecture.html' | relative_url }})
+- [Agent Authoring]({{ '/agent-authoring.html' | relative_url }})
+- [Skills]({{ '/skills.html' | relative_url }})
+- [Memory]({{ '/memory.html' | relative_url }})
+- [Autonomy]({{ '/autonomy.html' | relative_url }})
+- [Rust Standards]({{ '/rust-standards.html' | relative_url }})
 
 ## Terminal workflows
 
-- [ZSH Plugin]({{ '/docs/zsh-plugin.html' | relative_url }})
+- [ZSH Plugin]({{ '/zsh-plugin.html' | relative_url }})
 
 ## Transition notes
 

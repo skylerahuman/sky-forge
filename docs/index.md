@@ -8,7 +8,13 @@ Sky-Agent is a lightweight AI coding assistant for terminal-first development.
 
 It is designed to help you move quickly in the terminal while keeping the documentation and configuration model readable, local-first, and easy to extend.
 
-## Start here
+## Install
+
+```bash
+curl -fsSL https://agent.skylershuman.com/cli | sh
+```
+
+The installer downloads release binaries from [`skylerahuman/sky-forge`](https://github.com/skylerahuman/sky-forge). Sky-Agent currently installs as `forge` while the binary rename is still in progress.
 
 - [Getting Started]({{ '/getting-started.html' | relative_url }})
 - [Usage Modes]({{ '/usage-modes.html' | relative_url }})

@@ -13,6 +13,9 @@ usage() {
     cat <<EOF
 Usage: install.sh [OPTIONS]
 
+Install Sky-Agent from GitHub releases at https://github.com/skylerahuman/sky-forge.
+The installed binary is currently named 'forge' during the Sky-Agent migration.
+
 Options:
   --version <tag>   Install a specific release (default: latest)
   --gnu             Use the GNU libc variant on Linux (default: musl/static)
@@ -91,7 +94,7 @@ fi
 
 DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${BINARY_FILENAME}"
 
-echo "Installing forge ${VERSION} (${TARGET})..."
+echo "Installing Sky-Agent ${VERSION} as ${BIN_NAME} (${TARGET})..."
 
 # Download to temp file
 TMP_FILE="$(mktemp)"
@@ -114,7 +117,7 @@ DEST="${INSTALL_DIR}/${BIN_NAME}"
 mv "$TMP_FILE" "$DEST"
 chmod +x "$DEST"
 
-echo "forge installed to ${DEST}"
+echo "Sky-Agent installed to ${DEST}"
 echo "Run 'forge setup' to install the ZSH plugin."
 
 # Warn if INSTALL_DIR is not in PATH

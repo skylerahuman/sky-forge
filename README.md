@@ -1,10 +1,10 @@
 <h1 align="center">Sky-Agent</h1>
 <p align="center">A lightweight AI coding assistant for terminal-first development.</p>
 
-<p align="center"><code>curl -fsSL https://forgecode.dev/cli | sh</code></p>
+<p align="center"><code>curl -fsSL https://agent.skylershuman.com/cli | sh</code></p>
 
 <p align="center">
-  <a href="index.md">Documentation site</a> ·
+  <a href="https://agent.skylershuman.com/">Documentation site</a> ·
   <a href="docs/getting-started.md">Getting started</a> ·
   <a href="docs/usage-modes.md">Usage modes</a> ·
   <a href="docs/configuration.md">Configuration</a>
@@ -18,7 +18,7 @@ Sky-Agent is a terminal-first coding assistant for rapid implementation, researc
 
 ## Quick links
 
-- [Docs site](index.md)
+- [Docs site](https://agent.skylershuman.com/)
 - [Getting started](docs/getting-started.md)
 - [Usage modes](docs/usage-modes.md)
 - [ZSH plugin](docs/zsh-plugin.md)
@@ -34,7 +34,7 @@ Sky-Agent is a terminal-first coding assistant for rapid implementation, researc
 
 - The current CLI command remains `forge` during the migration.
 - Legacy Forge/ForgeCode terminology is retained only for compatibility, paths, or migration notes.
-- The public documentation surface is the GitHub Pages site rooted at `index.md`.
+- The public documentation surface is `https://agent.skylershuman.com/`.
 
 ## Repository docs
 
@@ -42,7 +42,7 @@ The repository still contains longer legacy sections below for compatibility whi
 
 ## Documentation
 
-For comprehensive documentation on all features and capabilities, please visit the [documentation site](https://github.com/tailcallhq/forgecode/tree/main/docs).
+For comprehensive documentation on all features and capabilities, please visit the [Sky-Agent documentation site](https://agent.skylershuman.com/).
 
 ---
 
@@ -50,10 +50,10 @@ For comprehensive documentation on all features and capabilities, please visit t
 
 ```bash
 # YOLO
-curl -fsSL https://forgecode.dev/cli | sh
+curl -fsSL https://agent.skylershuman.com/cli | sh
 
 # Package managers
-nix run github:tailcallhq/forgecode # for latest dev branch
+nix run github:skylerahuman/sky-forge # for latest dev branch
 ```
 
 ---

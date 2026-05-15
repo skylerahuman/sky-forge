@@ -9,10 +9,10 @@ Sky-Agent is a lightweight AI coding assistant for terminal-first development. I
 ## Install
 
 ```bash
-curl -fsSL https://forgecode.dev/cli | sh
+curl -fsSL https://agent.skylershuman.com/cli | sh
 ```
 
-The current transition still uses the `forge` CLI name, so most shell examples will use `forge` until the binary rename is completed.
+The hosted installer resolves releases from [`skylerahuman/sky-forge`](https://github.com/skylerahuman/sky-forge) and installs the current `forge` binary while the Sky-Agent CLI rename is still in progress.
 
 ## First run
 
@@ -23,6 +23,6 @@ The current transition still uses the `forge` CLI name, so most shell examples w
 
 ## What to read next
 
-- [Usage Modes]({{ '/docs/usage-modes.html' | relative_url }}) to understand interactive, one-shot, and ZSH workflows.
-- [Configuration]({{ '/docs/configuration.html' | relative_url }}) to learn how settings, providers, and preferences are resolved.
-- [ZSH Plugin]({{ '/docs/zsh-plugin.html' | relative_url }}) to use the terminal-first `:` command workflow.
+- [Usage Modes]({{ '/usage-modes.html' | relative_url }}) to understand interactive, one-shot, and ZSH workflows.
+- [Configuration]({{ '/configuration.html' | relative_url }}) to learn how settings, providers, and preferences are resolved.
+- [ZSH Plugin]({{ '/zsh-plugin.html' | relative_url }}) to use the terminal-first `:` command workflow.

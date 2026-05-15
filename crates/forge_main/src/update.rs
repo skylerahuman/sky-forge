@@ -7,13 +7,14 @@ use forge_select::ForgeWidget;
 use forge_tracker::VERSION;
 use update_informer::{Check, Version, registry};
 
-/// Runs the official installation script to update Forge, failing silently.
+/// Runs the Sky-Agent installation script to update the currently installed `forge`
+/// binary, failing silently.
 /// When `auto_update` is true, exits immediately after a successful update
 /// without prompting the user.
 async fn execute_update_command(api: Arc<impl API>, auto_update: bool) {
     // Spawn a new task that won't block the main application
     let output = api
-        .execute_shell_command_raw("curl -fsSL https://forgecode.dev/cli | sh")
+        .execute_shell_command_raw("curl -fsSL https://agent.skylershuman.com/cli | sh")
         .await;
 
     match output {
@@ -87,7 +88,7 @@ pub async fn on_update(api: Arc<impl API>, update: Option<&Update>) {
         return;
     }
 
-    let informer = update_informer::new(registry::GitHub, "tailcallhq/forgecode", VERSION)
+    let informer = update_informer::new(registry::GitHub, "skylerahuman/sky-forge", VERSION)
         .interval(frequency.into());
 
     if let Some(version) = informer.check_version().ok().flatten()
