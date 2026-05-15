@@ -1,4 +1,5 @@
 title: Sky-Agent
+theme: jekyll-theme-minimal
 markdown: kramdown
 kramdown:
   input: GFM
