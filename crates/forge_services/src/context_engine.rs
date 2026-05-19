@@ -89,7 +89,7 @@ impl<
         .await
     }
 
-    /// Gets the ForgeCode services credential and extracts workspace auth
+    /// Gets the SkyBolt services credential and extracts workspace auth
     /// components
     ///
     /// # Errors
@@ -179,7 +179,7 @@ impl<
     ) -> Result<forge_domain::WorkspaceInfo> {
         self.find_workspace_by_path(path, token)
             .await?
-            .context("Workspace not indexed. Please run `forge workspace init` first.")
+            .context("Workspace not indexed. Please run `sky workspace init` first.")
     }
 
     async fn _init_workspace(&self, path: PathBuf) -> Result<(bool, WorkspaceId)> {

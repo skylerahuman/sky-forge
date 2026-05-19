@@ -36,7 +36,7 @@ pub fn generate_zsh_plugin() -> Result<String> {
     // Generate clap completions for the CLI
     let mut cmd = Cli::command();
     let mut completions = Vec::new();
-    generate(Zsh, &mut cmd, "forge", &mut completions);
+    generate(Zsh, &mut cmd, "sky", &mut completions);
 
     // Append completions to the output with clear separator
     let completions_str = String::from_utf8(completions)?;

@@ -1,4 +1,4 @@
-//! `forge logs` — stream or list forge log files.
+//! `sky logs` - stream or list SkyBolt log files.
 
 use std::path::{Path, PathBuf};
 use std::time::SystemTime;

@@ -7,7 +7,7 @@ use forge_select::ForgeWidget;
 use forge_tracker::VERSION;
 use update_informer::{Check, Version, registry};
 
-/// Runs the Sky-Agent installation script to update the currently installed `forge`
+/// Runs the SkyBolt installation script to update the currently installed `sky`
 /// binary, failing silently.
 /// When `auto_update` is true, exits immediately after a successful update
 /// without prompting the user.
@@ -29,7 +29,7 @@ async fn execute_update_command(api: Arc<impl API>, auto_update: bool) {
                     true
                 } else {
                     let answer = forge_select::ForgeWidget::confirm(
-                        "You need to close forge to complete update. Do you want to close it now?",
+                        "You need to close sky to complete update. Do you want to close it now?",
                     )
                     .with_default(true)
                     .prompt();

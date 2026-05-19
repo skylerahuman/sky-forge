@@ -4,36 +4,16 @@ title: Usage Modes
 
 # Usage Modes
 
-Sky-Agent supports three ways to work.
+SkyBolt currently supports these usage modes:
 
-## Interactive mode
+- Interactive terminal sessions with `sky`.
+- Single-turn execution with `sky --prompt "..."`.
+- Piped input, for example `cat prompt.md | sky`.
+- Directory-scoped runs with `sky --directory <path>`.
+- Sandbox worktrees with `sky --sandbox <name>`.
+- JSON conversation execution through `sky --conversation <file>`.
+- Natural-language shell suggestions with `sky suggest "..."`.
+- AI-generated commit messages through `sky commit`.
+- Interactive selectors through `sky select`.
 
-Use interactive mode when you want to guide a longer task and let the agent keep track of the path to completion.
-
-Best for:
-
-- multi-step implementation work
-- debugging with back-and-forth steering
-- tasks where you want the agent to stay conversational
-
-## One-shot mode
-
-Use one-shot mode when you want a single request answered quickly.
-
-Best for:
-
-- small edits
-- direct questions
-- scripted terminal workflows
-
-## ZSH plugin mode
-
-Use ZSH plugin mode when you want a very fast terminal-native loop.
-
-Best for:
-
-- rapid iteration from the shell
-- `:`-prefixed commands
-- attaching files or switching agents without leaving the terminal
-
-See the dedicated [ZSH Plugin]({{ '/zsh-plugin.html' | relative_url }}) guide for the command reference.
+The CLI also exposes commands for agents, providers, models, config, conversations, MCP servers, workspace operations, logs, updates, VS Code integration, and ZSH integration.

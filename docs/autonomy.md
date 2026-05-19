@@ -4,21 +4,16 @@ title: Autonomy
 
 # Autonomy
 
-Sky-Agent should have a clear autonomy contract that changes by mode but stays consistent per agent.
+SkyBolt currently performs coding tasks by combining agent instructions with explicit tools.
 
-## Goals
+Implemented autonomy controls include:
 
-- ZSH mode should feel fast, terse, and iteration-friendly.
-- Interactive mode should feel guided, collaborative, and stateful.
-- The autonomy contract should describe when the agent may proceed and when it should ask for direction.
+- Tool selection and execution through the app tool registry.
+- Shell command execution with configured safeguards.
+- File read, search, write, patch, and undo tools.
+- Todo tracking and task delegation tools.
+- MCP tool execution.
+- Policy and permission-related domain types.
+- Retry handling and loop reminders through prompt templates.
 
-## Design principles
-
-- avoid per-mode agent duplication
-- keep the baseline contract explicit
-- distinguish rapid shell iteration from guided interactive work
-- make agent-specific autonomy easy to override when needed
-
-## Compatibility
-
-This guide defines the target contract for Sky-Agent and should stay aligned with the active tool and prompt behavior as it evolves.
+The exact behavior depends on the selected agent, configuration, and available tools.

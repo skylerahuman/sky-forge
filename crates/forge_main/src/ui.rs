@@ -3340,14 +3340,14 @@ impl<A: API + ConsoleWriter + 'static, F: Fn(ForgeConfig) -> A + Send + Sync> UI
         }
     }
 
-    /// Creates ForgeCode Services credentials if not already authenticated and
+    /// Creates SkyBolt Services credentials if not already authenticated and
     /// displays the credentials file location to the user.
     async fn init_forge_services(&mut self) -> Result<()> {
         self.api.create_auth_credentials().await?;
         let env = self.api.environment();
         let credentials_path = crate::info::format_path_for_display(&env, &env.credentials_path());
         self.writeln_title(
-            TitleFormat::info("ForgeCode Services enabled").sub_title(&credentials_path),
+            TitleFormat::info("SkyBolt Services enabled").sub_title(&credentials_path),
         )?;
         Ok(())
     }
@@ -5006,14 +5006,14 @@ impl<A: API + ConsoleWriter + 'static, F: Fn(ForgeConfig) -> A + Send + Sync> UI
         yes: bool,
     ) -> anyhow::Result<()> {
         // Ask for user consent before syncing and sharing directory contents
-        // with the ForgeCode Service.
+        // with the SkyBolt Service.
         let display_path = path.display().to_string();
 
         let confirmed = if yes {
             Some(true)
         } else {
             ForgeWidget::confirm(format!(
-                "This will sync and share the contents of '{}' with ForgeCode Services. Do you wish to continue?",
+                "This will sync and share the contents of '{}' with SkyBolt Services. Do you wish to continue?",
                 display_path
             ))
             .with_default(true)

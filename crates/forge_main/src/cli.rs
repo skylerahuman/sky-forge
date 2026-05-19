@@ -1,5 +1,5 @@
 //! NOTE: Always use singular names for commands and subcommands.
-//! For example: `forge provider login` instead of `forge providers login`.
+//! For example: `sky provider login` instead of `sky providers login`.
 //!
 //! NOTE: With every change to this CLI structure, verify that the ZSH plugin
 //! remains compatible. The plugin at `shell-plugin/forge.plugin.zsh` implements
@@ -17,7 +17,7 @@ pub struct Cli {
     ///
     /// When provided, executes a single command and exits instead of starting
     /// an interactive session. Content can also be piped: `cat prompt.txt |
-    /// forge`.
+    /// sky`.
     #[arg(long, short = 'p', allow_hyphen_values = true)]
     pub prompt: Option<String>,
 
@@ -42,7 +42,7 @@ pub struct Cli {
 
     /// Working directory to use before starting the session.
     ///
-    /// When provided, changes to this directory before starting forge.
+    /// When provided, changes to this directory before starting sky.
     #[arg(long, short = 'C')]
     pub directory: Option<PathBuf>,
 
@@ -140,7 +140,7 @@ pub enum TopLevelCommand {
     #[command(subcommand)]
     Vscode(VscodeCommand),
 
-    /// Update forge to the latest version.
+    /// Update sky to the latest version.
     Update(UpdateArgs),
 
     /// Setup zsh integration by updating .zshrc with plugin and theme (alias
@@ -150,14 +150,14 @@ pub enum TopLevelCommand {
     /// Run diagnostics on shell environment (alias for `zsh doctor`).
     Doctor,
 
-    /// Stream forge log output (defaults to the most recent log file).
+    /// Stream sky log output (defaults to the most recent log file).
     Logs(LogsArgs),
 
     /// Interactive fuzzy item picker.
     Select(SelectCommandGroup),
 }
 
-/// Command group for the `forge select` interactive picker.
+/// Command group for the `sky select` interactive picker.
 ///
 /// Subcommands provide purpose-built pickers for specific domain types (models,
 /// agents, providers, etc.) that fetch data internally and output the selected
@@ -640,21 +640,21 @@ pub enum ConfigCommand {
     Migrate,
 }
 
-/// Arguments for `forge config set`.
+/// Arguments for `sky config set`.
 #[derive(Parser, Debug, Clone)]
 pub struct ConfigSetArgs {
     #[command(subcommand)]
     pub field: ConfigSetField,
 }
 
-/// Arguments for `forge config get`.
+/// Arguments for `sky config get`.
 #[derive(Parser, Debug, Clone)]
 pub struct ConfigGetArgs {
     #[command(subcommand)]
     pub field: ConfigGetField,
 }
 
-/// Type-safe subcommands for `forge config set`.
+/// Type-safe subcommands for `sky config set`.
 #[derive(Subcommand, Debug, Clone)]
 pub enum ConfigSetField {
     /// Set the active model and provider atomically.
@@ -685,7 +685,7 @@ pub enum ConfigSetField {
     },
 }
 
-/// Type-safe subcommands for `forge config get`.
+/// Type-safe subcommands for `sky config get`.
 #[derive(Subcommand, Debug, Clone)]
 pub enum ConfigGetField {
     /// Get the active model.
@@ -864,7 +864,7 @@ pub struct CommitCommandGroup {
     ///
     /// Provide additional context or instructions for the AI to use when
     /// generating the commit message. Multiple words can be provided without
-    /// quotes: `forge commit fix typo in readme`
+    /// quotes: `sky commit fix typo in readme`
     pub text: Vec<String>,
 }
 
@@ -919,7 +919,7 @@ pub struct UpdateArgs {
     pub no_confirm: bool,
 }
 
-/// Arguments for the `forge logs` command.
+/// Arguments for the `sky logs` command.
 #[derive(Parser, Debug, Clone)]
 pub struct LogsArgs {
     /// Number of lines to show from the end of the log file.

@@ -90,7 +90,7 @@ async fn run() -> Result<()> {
     // Initialize and run the UI
     let mut cli = Cli::parse();
 
-    // Check if there's piped input, but skip for `forge select` since that
+    // Check if there's piped input, but skip for `sky select` since that
     // command uses stdin for its item list.
     let is_select = matches!(cli.subcommands, Some(TopLevelCommand::Select(_)));
     if !is_select && !std::io::stdin().is_terminal() {

@@ -75,7 +75,7 @@ impl Section {
 /// # Output Format
 ///
 /// ```text
-/// 
+///
 /// CONFIGURATION
 ///   model gpt-4
 /// provider openai
@@ -384,7 +384,7 @@ impl From<&ForgeConfig> for Info {
 
         info = info
             .add_title("API CONFIGURATION")
-            .add_key_value("ForgeCode Service URL", config.services_url.to_string())
+            .add_key_value("SkyBolt Service URL", config.services_url.to_string())
             .add_title("TOOL CONFIGURATION")
             .add_key_value("Tool Timeout", format!("{}s", config.tool_timeout_secs))
             .add_key_value(

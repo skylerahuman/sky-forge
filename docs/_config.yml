@@ -1,4 +1,4 @@
-title: Sky-Agent
+title: SkyBolt
 url: "https://agent.skylershuman.com"
 baseurl: ""
 markdown: kramdown
@@ -7,8 +7,3 @@ kramdown:
   hard_wrap: false
 sass:
   style: compressed
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default

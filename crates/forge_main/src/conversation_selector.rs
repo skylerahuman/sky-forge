@@ -15,8 +15,8 @@ impl ConversationSelector {
     /// Select a conversation from the provided list using a custom TUI with
     /// a preview pane showing conversation details.
     ///
-    /// The preview command uses `forge conversation info` and
-    /// `forge conversation show` to display the selected conversation's
+    /// The preview command uses `sky conversation info` and
+    /// `sky conversation show` to display the selected conversation's
     /// metadata and last message side-by-side with the picker list.
     ///
     /// Returns the selected conversation, or None if the user cancelled.

@@ -26,7 +26,7 @@ FORGE_DEBUG_REQUESTS="forge.request.json" \
 FORGE_SESSION__PROVIDER_ID=<provider_id> \
 FORGE_SESSION__MODEL_ID=<model_id> \
 FORGE_REASONING__EFFORT=<effort> \
-target/debug/forge -p "Hello!"
+target/debug/sky -p "Hello!"
 ```
 
 Then inspect `.forge/forge.request.json` for the expected fields.

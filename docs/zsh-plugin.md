@@ -4,24 +4,13 @@ title: ZSH Plugin
 
 # ZSH Plugin
 
-The ZSH plugin provides `:`-prefixed commands for fast, terminal-native interaction with Sky-Agent.
+SkyBolt currently includes ZSH integration through `sky setup` and `sky zsh` commands.
 
-## Core ideas
+Implemented shell functionality includes:
 
-- `:` sends a prompt to the active agent.
-- `:agent` switches the active agent.
-- `:@` file tagging attaches files to the current prompt.
-- `:help` should stay focused on shell workflow, session switching, and configuration behavior.
+- Installing/updating shell integration from the CLI.
+- Shell completion support tied to the current CLI command structure.
+- Right-prompt/status integrations backed by local session and usage data.
+- Shell diagnostics through `sky doctor`.
 
-## Workflow expectations
-
-The ZSH mode should favor:
-
-- short prompts
-- quick follow-up turns
-- minimal conversation overhead
-- direct access to the current working directory and selected files
-
-## Compatibility
-
-The shell workflow still uses the existing `forge` CLI during the transition, so examples and command names may remain legacy-compatible until the rename is complete.
+Some plugin internals still use legacy Forge filenames and function names.

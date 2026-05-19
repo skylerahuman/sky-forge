@@ -4,25 +4,24 @@ title: Getting Started
 
 # Getting Started
 
-Sky-Agent is a lightweight AI coding assistant for terminal-first development. It is built for fast terminal workflows, focused documentation, and a configuration-first setup.
-
-## Install
+Install SkyBolt:
 
 ```bash
 curl -fsSL https://agent.skylershuman.com/cli | sh
 ```
 
-The hosted installer resolves releases from [`skylerahuman/sky-forge`](https://github.com/skylerahuman/sky-forge) and installs the current `forge` binary while the Sky-Agent CLI rename is still in progress.
+The installed command is `sky`.
 
-## First run
+Common first commands:
 
-1. Install Sky-Agent.
-2. Run `forge` in a terminal.
-3. Choose a provider and sign in if prompted.
-4. Open a project and ask for a small change to confirm your setup works.
+```bash
+sky
+sky --prompt "explain this project briefly"
+sky provider login
+sky list model
+sky setup
+```
 
-## What to read next
+SkyBolt reads local configuration, starts in the current working directory by default, and can also run against another directory with `sky --directory <path>`.
 
-- [Usage Modes]({{ '/usage-modes.html' | relative_url }}) to understand interactive, one-shot, and ZSH workflows.
-- [Configuration]({{ '/configuration.html' | relative_url }}) to learn how settings, providers, and preferences are resolved.
-- [ZSH Plugin]({{ '/zsh-plugin.html' | relative_url }}) to use the terminal-first `:` command workflow.
+Some internal files and config paths still use the legacy `forge` name while the public CLI is `sky`.

@@ -1,38 +1,30 @@
 ---
-title: Sky-Agent
+title: SkyBolt
 ---
 
-# Sky-Agent
+# SkyBolt
 
-Sky-Agent is a lightweight AI coding assistant for terminal-first development.
+SkyBolt is a terminal-first AI coding assistant. It currently ships as the `sky` CLI and keeps some legacy `forge` internals for compatibility.
 
-It is designed to help you move quickly in the terminal while keeping the documentation and configuration model readable, local-first, and easy to extend.
+## Current Functionality
 
-## Install
+- Interactive coding sessions in the terminal.
+- One-shot prompts with `sky --prompt` and piped stdin.
+- Provider/model login, selection, and configuration.
+- Custom agents, custom commands, and skills.
+- Built-in tools for file edits, search, shell execution, web fetches, todos, and task delegation.
+- MCP server configuration and execution.
+- Conversation history, logs, dumps, updates, and ZSH integration.
 
-```bash
-curl -fsSL https://agent.skylershuman.com/cli | sh
-```
+## Docs
 
-The installer downloads release binaries from [`skylerahuman/sky-forge`](https://github.com/skylerahuman/sky-forge). Sky-Agent currently installs as `forge` while the binary rename is still in progress.
-
-- [Getting Started]({{ '/getting-started.html' | relative_url }})
-- [Usage Modes]({{ '/usage-modes.html' | relative_url }})
-- [Configuration]({{ '/configuration.html' | relative_url }})
-
-## Explore the system
-
-- [Architecture]({{ '/architecture.html' | relative_url }})
-- [Agent Authoring]({{ '/agent-authoring.html' | relative_url }})
-- [Skills]({{ '/skills.html' | relative_url }})
-- [Memory]({{ '/memory.html' | relative_url }})
-- [Autonomy]({{ '/autonomy.html' | relative_url }})
-- [Rust Standards]({{ '/rust-standards.html' | relative_url }})
-
-## Terminal workflows
-
-- [ZSH Plugin]({{ '/zsh-plugin.html' | relative_url }})
-
-## Transition notes
-
-Sky-Agent currently ships with the existing `forge` CLI while the branding migration is in progress. Legacy Forge/ForgeCode terminology only remains where compatibility requires it.
+- [Getting Started](getting-started.md)
+- [Usage Modes](usage-modes.md)
+- [Configuration](configuration.md)
+- [Architecture](architecture.md)
+- [Agent Authoring](agent-authoring.md)
+- [Skills](skills.md)
+- [Memory](memory.md)
+- [Autonomy](autonomy.md)
+- [ZSH Plugin](zsh-plugin.md)
+- [Rust Standards](rust-standards.md)

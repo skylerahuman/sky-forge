@@ -2,7 +2,7 @@
 set -eu
 
 REPO="skylerahuman/sky-forge"
-BIN_NAME="forge"
+BIN_NAME="sky"
 INSTALL_DIR="${FORGE_INSTALL_DIR:-$HOME/.local/bin}"
 
 # Flags
@@ -13,8 +13,8 @@ usage() {
     cat <<EOF
 Usage: install.sh [OPTIONS]
 
-Install Sky-Agent from GitHub releases at https://github.com/skylerahuman/sky-forge.
-The installed binary is currently named 'forge' during the Sky-Agent migration.
+Install SkyBolt from GitHub releases at https://github.com/skylerahuman/sky-forge.
+The installed binary is named 'sky'.
 
 Options:
   --version <tag>   Install a specific release (default: latest)
@@ -94,7 +94,7 @@ fi
 
 DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${BINARY_FILENAME}"
 
-echo "Installing Sky-Agent ${VERSION} as ${BIN_NAME} (${TARGET})..."
+echo "Installing SkyBolt ${VERSION} as ${BIN_NAME} (${TARGET})..."
 
 # Download to temp file
 TMP_FILE="$(mktemp)"
@@ -117,8 +117,8 @@ DEST="${INSTALL_DIR}/${BIN_NAME}"
 mv "$TMP_FILE" "$DEST"
 chmod +x "$DEST"
 
-echo "Sky-Agent installed to ${DEST}"
-echo "Run 'forge setup' to install the ZSH plugin."
+echo "SkyBolt installed to ${DEST}"
+echo "Run 'sky setup' to install the ZSH plugin."
 
 # Warn if INSTALL_DIR is not in PATH
 case ":${PATH}:" in

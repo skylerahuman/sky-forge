@@ -4,18 +4,13 @@ title: Rust Standards
 
 # Rust Standards
 
-Sky-Agent uses a strict but practical Rust style that favors clarity, explicit boundaries, and source-backed behavior.
+SkyBolt is built as a Rust 2024 workspace using the toolchain pinned in `rust-toolchain.toml`.
 
-## Core expectations
+Current standards and checks include:
 
-- write rustdoc for public APIs
-- prefer explicit config and domain boundaries
-- keep services focused and composable
-- use `anyhow::Result` at service boundaries and `thiserror` for domain errors
-- avoid unnecessary trait objects and oversized generic APIs
-- keep tests close to the source they cover
-- keep prompt and template changes snapshot-friendly
-
-## Documentation and config
-
-When behavior changes, update the relevant docs and keep schema-backed configuration aligned with the Rust types.
+- Workspace crates under `crates/*`.
+- Shared dependencies declared in the root `Cargo.toml`.
+- Formatting configured by `.rustfmt.toml`.
+- Lints configured through `clippy.toml` and CI `RUSTFLAGS=-Dwarnings`.
+- Snapshot testing with `insta` where used.
+- CI command: `cargo test --workspace`.

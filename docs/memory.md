@@ -4,24 +4,14 @@ title: Memory
 
 # Memory
 
-Sky-Agent should use a native memory model that keeps user, project, and workspace context separate.
+SkyBolt currently stores and resumes conversation state through its existing conversation history system.
 
-## Memory scopes
+Implemented memory-related features include:
 
-- **Global user memory**: durable preferences that follow the user
-- **Project memory**: notes that belong to a specific repository or workspace
-- **Conversation memory**: short-lived context for the current thread
-- **Workspace context**: indexed source material that is retrieved when relevant
+- Conversation IDs with `--conversation-id` / `--cid`.
+- Conversation history and session management through `sky conversation`.
+- JSON conversation execution with `--conversation <file>`.
+- Logs through `sky logs`.
+- Optional automatic dumps in JSON or HTML, depending on configuration.
 
-## Design goals
-
-Memory should be:
-
-- local-first
-- explicit about scope
-- safe across repositories
-- easy to inspect and reason about
-
-## Compatibility
-
-This guide describes the target memory model that Sky-Agent should evolve toward, rather than assuming a shared Claude-style memory source.
+This page describes current persistence behavior, not a long-term memory roadmap.
