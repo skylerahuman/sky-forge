@@ -1,0 +1,15 @@
+[package]
+name = "sky_interface"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+crossterm = { workspace = true }
+ratatui = { workspace = true }
+sky_core = { workspace = true }
+sky_engine = { workspace = true }
+sky_ledger = { workspace = true }
+sky_providers = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }

@@ -46,3 +46,7 @@ jobs/**
 node_modules/
 bench/__pycache__
 .ai/
+
+# Skills
+.opencode/
+skills-lock.json

@@ -1,0 +1,11 @@
+[package]
+name = "sky_ledger"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+sky_core = { workspace = true }
+
+[dev-dependencies]
+pretty_assertions = { workspace = true }
